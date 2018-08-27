@@ -2,6 +2,8 @@
 require "tee/version"
 
 module Tee
+  VERSION = '0.0.1'
+
   # Instances of Tee::File can be used as Logger targets. Logged messages will
   # be written to all the targets specified in the initializer.
   #
@@ -13,7 +15,7 @@ module Tee
        @targets = targets
        @targets.each_with_index do |file, index|
          if String === file
-           @targets[index] = File.open(file, "w")
+           @targets[index] = ::File.open(file, "w")
          end
        end
     end
