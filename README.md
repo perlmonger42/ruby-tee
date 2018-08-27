@@ -25,8 +25,10 @@ Or install it yourself as:
 For example,
 
 ```ruby
-  config.log_formatter = ::Logger::Formatter.new
-  logger = ActiveSupport::Logger.new(MultiIO.new(STDOUT, 'tracking.log'))
+  require 'logger'
+  logger = Logger.new(MultiIO.new(STDOUT, 'tracking.log'))
+
+  logger.warn('I have a bad feeling about this...')
 ```
 
 ## Development
