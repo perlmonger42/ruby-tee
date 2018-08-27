@@ -2,8 +2,6 @@
 require "tee/version"
 
 module Tee
-  VERSION = '0.0.1'
-
   # Instances of Tee::File can be used as Logger targets. Logged messages will
   # be written to all the targets specified in the initializer.
   #
